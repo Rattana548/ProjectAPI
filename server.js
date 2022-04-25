@@ -1,13 +1,10 @@
 require("dotenv").config()
-const http = require('http');
 const express = require('express');
 const app = express();
 const mysql = require('mysql2');
 const cors = require('cors');
 
-const httpServer = http.createServer(app);
-const port = process.env.port
-httpServer.listen(port,() => console.log(`Server Started on port ${port}..`));
+
 
 app.use(cors())
 app.use(express.json());
@@ -80,3 +77,5 @@ app.get("/", (req, res) => {
 
 
 
+const port = process.env.port
+httpServer.listen(port,() => console.log(`Server Started on port ${port}..`));
