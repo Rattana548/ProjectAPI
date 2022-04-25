@@ -78,4 +78,4 @@ app.get("/", (req, res) => {
 
 
 const port = process.env.port
-httpServer.listen(port,() => console.log(`Server Started on port ${port}..`));
+app.listen(port,() => console.log(`Server Started on port ${port}..`));
